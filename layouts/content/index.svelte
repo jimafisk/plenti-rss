@@ -15,11 +15,7 @@
 
 <h1>{title}</h1>
 
-<section id="intro">
-	{#each intro as paragraph}
-		<p>{@html paragraph}</p>
-	{/each}
-</section>
+<p>Checkout our new <a href="rss">RSS feed</a></p>
 
 <div>
 	<h3>Recent blog posts:</h3>

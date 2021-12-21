@@ -8,12 +8,12 @@
   export let content, layout, allContent, allLayouts, env;
 </script>
 
-{#if content.path == "rss"}
-  <RSS {allContent} />
-{:else}
 <html lang="en">
 <Head title={makeTitle(content.filename)} {env} />
 <body>
+  {#if content.path == "rss"}
+      <svelte:component this={layout} {...content.fields} {content} {allContent} {allLayouts} />
+  {:else}
   <Nav />
   <main>
     <div class="container">
@@ -22,9 +22,9 @@
     </div>
   </main>
   <Footer {allContent} />
+  {/if}
 </body>
 </html>
-{/if}
 
 <style>
   html, body {
