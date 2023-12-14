@@ -13,6 +13,11 @@
 
 </script>
 
-<pre style="word-wrap: break-word; white-space: pre-wrap;">
-    {rssFeed}
-</pre>
+<html lang="en">
+    <head>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="rss" />
+    </head>
+    <body>
+        {rssFeed}
+    </body>
+</html>
